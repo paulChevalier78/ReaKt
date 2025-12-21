@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>ReaKt — Smart Bioreactor Autopilot & Simulator</title>
+		<meta name="description" content="ReaKt is a predictive closed-loop controller for industrial bioreactors, combining a Deep Learning Digital Twin (LSTM) with Model Predictive Control (MPC)." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css" />
+		<link rel="icon" href="assets/logobis.jpeg" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="#">
+					<img src="assets/logobis.jpeg" alt="ReaKt" width="28" height="28" />
+					<span>ReaKt</span>
+				</a>
+				<nav class="nav" aria-label="Main navigation">
+					<button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<ul id="nav-menu" class="nav-menu">
+						<li><a href="#overview">Overview</a></li>
+						<li><a href="#how-it-works">How It Works</a></li>
+						<li><a href="#features">Features</a></li>
+						<li><a href="#benefits">Benefits</a></li>
+						<li><a href="#use-cases">Use Cases</a></li>
+						<li><a href="#why">Why ReaKt</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<a class="cta cta--small" href="#contact">Request a demo</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container hero-inner">
+					<div class="hero-copy">
+						<h1>Smart Bioreactor Autopilot & Simulator</h1>
+						<p class="lead">Predictive Closed-Loop control built on a Deep Learning Digital Twin (LSTM) and Model Predictive Control (MPC). Train the digital twin on your own data.</p>
+						<div class="hero-actions">
+							<a class="cta" href="#contact">Try / Demo</a>
+							<a class="cta cta--secondary" href="#overview">Learn more</a>
+						</div>
+						<ul class="hero-stats" aria-label="Key indicators">
+							<li><strong>↑15–30%</strong><span>Productivity</span></li>
+							<li><strong>↓20%</strong><span>Energy consumption</span></li>
+							<li><strong>99.5%</strong><span>Quality compliance</span></li>
+						</ul>
+					</div>
+					<div class="hero-visual">
+						<img src="https://raw.githubusercontent.com/Gab404/ReaKt/main/assets/example.png" alt="Dashboard Preview" />
+					</div>
+				</div>
+				<div class="hero-gradient" aria-hidden="true"></div>
+			</section>
+			<section id="overview" class="section">
+				<div class="container">
+					<h2 class="section-title">Overview</h2>
+					<p class="lead"><strong>ReaKt</strong> is a control software designed to optimize and simulate industrial fermentation processes. It moves beyond trial-and-error by combining a <strong>Deep Learning Digital Twin (LSTM)</strong> with <strong>Model Predictive Control (MPC)</strong> to optimize inputs in real-time.</p>
+					<div class="cards">
+						<article class="card"><h4>Digital Twin</h4><p>LSTM trained on historical batches to learn non-linear biological dynamics.</p></article>
+						<article class="card"><h4>MPC Strategist</h4><p>Optimizes Sugar Feed, Aeration, Temperature, pH under constraints.</p></article>
+						<article class="card"><h4>Own Data</h4><p>Train the LSTM on your own dataset to adapt to your process.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section id="how-it-works" class="section alt">
+				<div class="container">
+					<h2 class="section-title">How It Works</h2>
+					<ol class="steps">
+						<li><h4>1. Digital Twin (LSTM)</h4><p>Predicts Penicillin and Biomass concentrations ahead of time.</p></li>
+						<li><h4>2. MPC Optimizer</h4><p>Solves a real-time optimization problem for future control actions.</p></li>
+						<li><h4>3. Closed Loop</h4><p>Feeds optimal setpoints back to the process and adapts continuously.</p></li>
+						<li><h4>4. Replay & Benchmark</h4><p>Analyze past batches and compare MPC vs historical performance.</p></li>
+					</ol>
+				</div>
+			</section>
+
+			<section id="features" class="section">
+				<div class="container">
+					<h2 class="section-title">Features & Interface</h2>
+					<div class="features-grid">
+						<article class="feature"><h3>3D Digital Twin</h3><p>Animated 3D bioreactor (Plotly) with volume, RPM, aeration bubbles, and color change based on biomass.</p></article>
+						<article class="feature"><h3>Real-time Monitoring</h3><p>Live KPIs (Penicillin, Biomass, Volume) and control variables.</p></article>
+						<article class="feature"><h3>Interactive Replay</h3><p>"DVR" mode to replay batches and inspect MPC decisions.</p></article>
+						<article class="feature"><h3>Process Charts</h3><p>Plots of Sugar, Air, Acid, Base vs biological outputs.</p></article>
+						<article class="feature"><h3>Hardware Aware</h3><p>Runs on CPU/GPU with efficient memory management.</p></article>
+						<article class="feature"><h3>Simple Setup</h3><p>Train, save model + scalers, run Streamlit app with your data.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section id="benefits" class="section">
+				<div class="container">
+					<h2 class="section-title">Benefits</h2>
+					<div class="cards">
+						<article class="card"><h4>Higher Yield</h4><p>Increase product concentration by optimizing feed and aeration profiles.</p></article>
+						<article class="card"><h4>Stable Quality</h4><p>Reduce inter-batch variability with predictive control and monitoring.</p></article>
+						<article class="card"><h4>Lower Costs</h4><p>Cut energy and consumables while meeting production objectives.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section id="use-cases" class="section alt">
+				<div class="container">
+					<h2 class="section-title">Use Cases</h2>
+					<ul class="bullets">
+						<li><strong>R&D:</strong> Test new feeding strategies safely in simulation before the plant.</li>
+						<li><strong>Scale‑Up:</strong> Transfer learnings from lab to pilot/production with data‑driven control.</li>
+						<li><strong>Continuous Improvement:</strong> Benchmark batches and reduce variability over time.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="why" class="section">
+				<div class="container">
+					<h2 class="section-title">Why ReaKt</h2>
+					<p class="lead">A pragmatic “autopilot” for bioprocesses combining predictive models with optimization, built to deliver measurable production gains quickly.</p>
+					<div class="cards">
+						<article class="card"><h4>Fast Deployment</h4><p>Interfaces with existing data and PLCs; minimal disruption.</p></article>
+						<article class="card"><h4>Measurable Impact</h4><p>Focus on yield, quality, and cost KPIs from day one.</p></article>
+						<article class="card"><h4>Modular</h4><p>Start with monitoring, add optimization when ready.</p></article>
+					</div>
+				</div>
+			</section>
+
+			<section id="security" class="section alt">
+				<div class="container">
+					<h2 class="section-title">Security & Compliance</h2>
+					<ul class="bullets">
+						<li><strong>Data Ownership:</strong> Your data stays within your environment.</li>
+						<li><strong>Access Control:</strong> Role‑based permissions and auditability.</li>
+						<li><strong>Industrial Standards:</strong> Integrates with historian/SCADA best practices.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section id="roadmap" class="section">
+				<div class="container">
+					<h2 class="section-title">Roadmap</h2>
+					<ul class="bullets">
+						<li><strong>Q1:</strong> Pilot deployments, expanded twin calibration tooling.</li>
+						<li><strong>Q2:</strong> Advanced optimization features, multi‑reactor coordination.</li>
+						<li><strong>Q3:</strong> Enterprise dashboards, compliance templates.</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="section alt">
+				<div class="container" style="text-align:center">
+					<a href="mailto:contact@reakt.ai?subject=ReaKt%20Demo" class="cta">Book a demo</a>
+					<a href="#contact" class="cta" style="margin-left:12px">Request the deck</a>
+				</div>
+			</section>
+
+            
+
+			<section id="contact" class="section alt">
+				<div class="container contact">
+					<div class="contact-copy">
+						<h2 class="section-title">Contact & demo</h2>
+						<p>Tell us about your bioreactor setup, objectives and constraints. We’ll prepare a tailored demo on your use case.</p>
+						<ul class="bullets">
+							<li>Quick data and sensor audit</li>
+							<li>ROI estimation in 2 weeks</li>
+							<li>Pilot on one bioreactor in 4–6 weeks</li>
+						</ul>
+					</div>
+					<form class="contact-form" action="mailto:contact@reakt.ai" method="post" enctype="text/plain" onsubmit="return window.reakt.handleContactSubmit(event)">
+						<label>
+							<span>Name</span>
+							<input type="text" name="name" required />
+						</label>
+						<label>
+							<span>Email</span>
+							<input type="email" name="email" required />
+						</label>
+						<label>
+							<span>Message</span>
+							<textarea name="message" rows="4" required></textarea>
+						</label>
+						<button class="cta" type="submit">Send</button>
+						<p class="form-hint">By sending, you agree to our privacy policy.</p>
+					</form>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				 <a class="brand" href="#">
+					<img src="assets/logobis.jpeg" alt="ReaKt" width="22" height="22" />
+					<span>ReaKt</span>
+				</a>
+				<ul class="footer-links">
+					<li><a href="#overview">Overview</a></li>
+					<li><a href="#how-it-works">How It Works</a></li>
+					<li><a href="#features">Features</a></li>
+					<li><a href="#benefits">Benefits</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<p class="copyright">© <span id="year"></span> ReaKt. All rights reserved.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+	</html>

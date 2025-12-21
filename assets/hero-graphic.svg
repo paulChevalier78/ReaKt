@@ -1,0 +1,62 @@
+<svg width="900" height="680" viewBox="0 0 900 680" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Schéma bioréacteur">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#121933"/>
+      <stop offset="100%" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4cd2c0"/>
+      <stop offset="100%" stop-color="#3aa8ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+  <rect width="900" height="680" rx="28" fill="url(#bg)"/>
+
+  <!-- Cuve -->
+  <g transform="translate(110,60)" filter="url(#shadow)">
+    <rect x="0" y="0" width="420" height="520" rx="38" fill="#0e1533" stroke="#3a4c7a" stroke-width="2"/>
+    <rect x="36" y="48" width="348" height="380" rx="20" fill="#0a1229" stroke="#26365e"/>
+    <rect x="36" y="440" width="348" height="40" rx="12" fill="#141f44"/>
+
+    <!-- Niveau liquide -->
+    <path d="M56 360 Q 140 330 220 360 T 364 360 V 408 H 56 Z" fill="#173d5f" opacity="0.9"/>
+    <path d="M56 360 Q 140 330 220 360 T 364 360" fill="none" stroke="#3aa8ff" stroke-width="3" opacity="0.7"/>
+
+    <!-- Agitateur -->
+    <circle cx="210" cy="360" r="34" fill="#0b1a3f" stroke="#4cd2c0" stroke-width="2"/>
+    <rect x="208" y="120" width="4" height="236" fill="#7df0d9"/>
+    <rect x="170" y="352" width="80" height="16" rx="8" fill="#1d2a55" stroke="#3aa8ff"/>
+
+    <!-- Capteurs -->
+    <circle cx="64" cy="120" r="8" fill="#7df0d9"/>
+    <circle cx="356" cy="190" r="8" fill="#3aa8ff"/>
+    <circle cx="120" cy="220" r="6" fill="#4cd2c0"/>
+  </g>
+
+  <!-- Flux / tuyauteries -->
+  <g stroke="url(#line)" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M530 130 H 780"/>
+    <path d="M530 260 H 750 Q 820 260 820 330 V 520 H 780"/>
+    <path d="M530 420 H 720"/>
+  </g>
+
+  <!-- Boîtes d'optimisation / UI -->
+  <g transform="translate(580,80)">
+    <rect x="0" y="0" width="260" height="90" rx="14" fill="#111a39" stroke="#2e3f74"/>
+    <text x="16" y="28" font-family="Inter, Arial" font-size="18" fill="#b9c6e4">MPC Optimizer</text>
+    <text x="16" y="58" font-family="Inter, Arial" font-size="14" fill="#7df0d9">coûts, contraintes, setpoints</text>
+  </g>
+  <g transform="translate(560,210)">
+    <rect x="0" y="0" width="300" height="110" rx="14" fill="#111a39" stroke="#2e3f74"/>
+    <text x="16" y="28" font-family="Inter, Arial" font-size="18" fill="#b9c6e4">Jumeau numérique</text>
+    <text x="16" y="58" font-family="Inter, Arial" font-size="14" fill="#93a8d4">modèle hybride + estimation d'états</text>
+    <text x="16" y="82" font-family="Inter, Arial" font-size="14" fill="#3aa8ff">prévision 0–24 h</text>
+  </g>
+  <g transform="translate(600,370)">
+    <rect x="0" y="0" width="220" height="110" rx="14" fill="#111a39" stroke="#2e3f74"/>
+    <text x="16" y="28" font-family="Inter, Arial" font-size="18" fill="#b9c6e4">Données</text>
+    <text x="16" y="58" font-family="Inter, Arial" font-size="14" fill="#93a8d4">capteurs, SCADA, MES</text>
+  </g>
+</svg>

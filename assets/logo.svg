@@ -1,0 +1,18 @@
+<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ReacKt logo">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#4cd2c0"/>
+      <stop offset="100%" stop-color="#3aa8ff"/>
+    </linearGradient>
+    <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#1ee3c7" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <rect x="28" y="28" width="200" height="200" rx="48" fill="#0e1533" stroke="url(#g)" stroke-width="6" filter="url(#s)"/>
+  <g transform="translate(64,60)">
+    <path d="M0 96c0-48 32-72 96-72" fill="none" stroke="url(#g)" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="160" cy="24" r="10" fill="#7df0d9"/>
+    <circle cx="112" cy="24" r="6" fill="#3aa8ff"/>
+    <text x="0" y="128" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="64" fill="url(#g)">R</text>
+  </g>
+</svg>
