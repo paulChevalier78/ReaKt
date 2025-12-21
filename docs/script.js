@@ -51,27 +51,60 @@ window.reakt = (function(){
     const message = (data.get('message')||'').toString().trim();
 
     if(!name || !email || !message){
-      alert('Please fill out all fields.');
+      alert('Veuillez remplir tous les champs.');
       return false;
     }
 
-    // Fallback: mailto (may open your email client).
-    const subject = encodeURIComponent('ReaKt demo request');
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:contact@reakt.ai?subject=${subject}&body=${body}`;
-
-    setTimeout(() => {
-      alert('Thanks! Your request has been received.');
+    // Send email via Formspree (service gratuit, pas de backend nécessaire)
+    const formspreeUrl = 'https://formspree.io/f/xyeoqqkq';
+    
+    fetch(formspreeUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    })
+    .then(() => {
+      alert('Merci! Votre message a été reçu.');
       form.reset();
-    }, 250);
+    })
+    .catch(() => {
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    });
 
     return false;
+  }
+
+  function initLightbox(){
+    const modal = qs('#lightbox-modal');
+    const closeBtn = qs('.lightbox-close');
+    if(!modal) return;
+    
+    qsa('.clickable-image').forEach(img => {
+      img.addEventListener('click', () => {
+        const lightboxImg = qs('#lightbox-image');
+        lightboxImg.src = img.src;
+        modal.classList.add('open');
+      });
+    });
+    
+    closeBtn.addEventListener('click', () => modal.classList.remove('open'));
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal) modal.classList.remove('open');
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if(e.key === 'Escape' && modal.classList.contains('open')) {
+        modal.classList.remove('open');
+      }
+    });
   }
 
   function init(){
     initYear();
     initNav();
     initSmoothScroll();
+    initLightbox();
   }
 
   if(document.readyState === 'loading'){

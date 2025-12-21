@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Fonctionnalités — ReaKt</title>
+		<meta name="description" content="Découvrez les 6 fonctionnalités principales de ReaKt." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="../assets/reakt-logo.svg" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html">
+					<img src="../assets/reakt-logo.svg" alt="ReaKt" width="32" height="32" />
+					<span>ReaKt</span>
+				</a>
+				<nav class="nav" aria-label="Main navigation">
+					<button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<ul id="nav-menu" class="nav-menu">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="overview.html">Overview</a></li>
+						<li><a href="how-it-works.html">Comment ça marche</a></li>
+						<li><a href="features.html">Fonctionnalités</a></li>
+						<li><a href="benefits.html">Avantages</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<a class="cta cta--small" href="contact.html">Demander une démo</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="section" style="padding-top:80px">
+				<div class="container">
+					<h1 class="section-title">Fonctionnalités & Interface</h1>
+					<div class="features-grid">
+						<article class="feature"><h3>Digital Twin 3D</h3><p>Bioréacteur 3D animé (Plotly) avec volume, RPM, bulles d'aération et changement de couleur basé sur la biomasse.</p></article>
+						<article class="feature"><h3>Monitoring en temps réel</h3><p>KPIs en direct (Pénicilline, Biomasse, Volume) et variables de contrôle.</p></article>
+						<article class="feature"><h3>Relecture interactive</h3><p>Mode "DVR" pour relire les lots et inspecter les décisions MPC.</p></article>
+						<article class="feature"><h3>Graphiques de processus</h3><p>Tracés du sucre, de l'air, de l'acide, de la base par rapport aux sorties biologiques.</p></article>
+						<article class="feature"><h3>Conscient du matériel</h3><p>S'exécute sur CPU/GPU avec une gestion mémoire efficace.</p></article>
+						<article class="feature"><h3>Configuration simple</h3><p>Entraînez, sauvegardez le modèle + scaleurs, exécutez l'application Streamlit avec vos données.</p></article>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				 <a class="brand" href="index.html">
+					<img src="../assets/reakt-logo.svg" alt="ReaKt" width="28" height="28" />
+					<span>ReaKt</span>
+				</a>
+				<ul class="footer-links">
+					<li><a href="overview.html">Overview</a></li>
+					<li><a href="how-it-works.html">Comment ça marche</a></li>
+					<li><a href="features.html">Fonctionnalités</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<p class="copyright">© <span id="year"></span> ReaKt. Tous droits réservés.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

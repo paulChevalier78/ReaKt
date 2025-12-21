@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Comment ça marche — ReaKt</title>
+		<meta name="description" content="Découvrez les 4 étapes du fonctionnement de ReaKt." />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="../assets/reakt-logo.svg" />
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="container header-inner">
+				<a class="brand" href="index.html">
+					<img src="../assets/reakt-logo.svg" alt="ReaKt" width="32" height="32" />
+					<span>ReaKt</span>
+				</a>
+				<nav class="nav" aria-label="Main navigation">
+					<button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+						<span class="bar"></span>
+						<span class="bar"></span>
+						<span class="bar"></span>
+					</button>
+					<ul id="nav-menu" class="nav-menu">
+						<li><a href="index.html">Accueil</a></li>
+						<li><a href="overview.html">Overview</a></li>
+						<li><a href="how-it-works.html">Comment ça marche</a></li>
+						<li><a href="features.html">Fonctionnalités</a></li>
+						<li><a href="benefits.html">Avantages</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</nav>
+				<a class="cta cta--small" href="contact.html">Demander une démo</a>
+			</div>
+		</header>
+
+		<main>
+			<section class="section" style="padding-top:80px">
+				<div class="container">
+					<h1 class="section-title">Comment ça marche</h1>
+					<ol class="steps">
+						<li><h4>1. Digital Twin (LSTM)</h4><p>Prédit les concentrations en Pénicilline et Biomasse à l'avance.</p></li>
+						<li><h4>2. Optimiseur MPC</h4><p>Résout un problème d'optimisation en temps réel pour les actions de contrôle futures.</p></li>
+						<li><h4>3. Boucle fermée</h4><p>Renvoie les consignes optimales au processus et s'adapte continuellement.</p></li>
+						<li><h4>4. Relecture et comparaison</h4><p>Analyser les lots passés et comparer la performance MPC par rapport aux résultats historiques.</p></li>
+					</ol>
+				</div>
+			</section>
+		</main>
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				 <a class="brand" href="index.html">
+					<img src="../assets/reakt-logo.svg" alt="ReaKt" width="28" height="28" />
+					<span>ReaKt</span>
+				</a>
+				<ul class="footer-links">
+					<li><a href="overview.html">Overview</a></li>
+					<li><a href="how-it-works.html">Comment ça marche</a></li>
+					<li><a href="features.html">Fonctionnalités</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+				<p class="copyright">© <span id="year"></span> ReaKt. Tous droits réservés.</p>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

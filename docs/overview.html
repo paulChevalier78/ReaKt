@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>ReaKt — Smart Bioreactor Autopilot & Simulator</title>
-		<meta name="description" content="ReaKt is a predictive closed-loop controller for industrial bioreactors, combining a Deep Learning Digital Twin (LSTM) with Model Predictive Control (MPC)." />
+		<title>Overview — ReaKt</title>
+		<meta name="description" content="Learn how ReaKt works: Digital Twin, MPC Optimizer, and Closed Loop control." />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -12,14 +12,6 @@
 		<link rel="icon" href="../assets/reakt-logo.svg" />
 	</head>
 	<body>
-		<!-- Lightbox Modal -->
-		<div id="lightbox-modal" class="lightbox-modal">
-			<div class="lightbox-content">
-				<button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-				<img id="lightbox-image" src="" alt="Enlarged image" />
-			</div>
-		</div>
-
 		<header class="site-header">
 			<div class="container header-inner">
 				<a class="brand" href="index.html">
@@ -46,47 +38,15 @@
 		</header>
 
 		<main>
-			<section class="hero">
-				<div class="container hero-inner">
-					<div class="hero-copy">
-						<h1>Smart Bioreactor Autopilot & Simulator</h1>
-						<p class="lead">Contrôle prédictif en boucle fermée construit sur un Digital Twin basé sur le Deep Learning (LSTM) et le Model Predictive Control (MPC). Entraînez le digital twin sur vos propres données.</p>
-						<div class="hero-actions">
-							<a class="cta" href="contact.html">Essayer / Démo</a>
-							<a class="cta cta--secondary" href="overview.html">En savoir plus</a>
-						</div>
-						<ul class="hero-stats" aria-label="Key indicators">
-							<li><strong>↑15–30%</strong><span>Productivité</span></li>
-							<li><strong>↓20%</strong><span>Consommation d'énergie</span></li>
-							<li><strong>99.5%</strong><span>Conformité qualité</span></li>
-						</ul>
-					</div>
-					<div class="hero-visual">
-						<img src="https://raw.githubusercontent.com/Gab404/ReaKt/main/assets/example.png" alt="Dashboard Preview" class="clickable-image" title="Cliquez pour agrandir" />
-					</div>
-				</div>
-				<div class="hero-gradient" aria-hidden="true"></div>
-			</section>
-
-			<section id="overview" class="section">
+			<section class="section" style="padding-top:80px">
 				<div class="container">
-					<h2 class="section-title">Vue d'ensemble</h2>
+					<h1 class="section-title">Vue d'ensemble</h1>
 					<p class="lead"><strong>ReaKt</strong> est un logiciel de contrôle conçu pour optimiser et simuler les processus de fermentation industrielle. Il va au-delà de la méthode essai-erreur en combinant un <strong>Digital Twin basé sur le Deep Learning (LSTM)</strong> avec un <strong>Model Predictive Control (MPC)</strong> pour optimiser les entrées en temps réel.</p>
 					<div class="cards">
 						<article class="card"><h4>Digital Twin</h4><p>LSTM entraîné sur des lots historiques pour apprendre la dynamique biologique non linéaire.</p></article>
 						<article class="card"><h4>Stratégiste MPC</h4><p>Optimise l'alimentation en sucre, l'aération, la température, le pH sous contraintes.</p></article>
 						<article class="card"><h4>Vos données</h4><p>Entraînez le LSTM sur votre propre ensemble de données pour adapter le processus.</p></article>
 					</div>
-					<div style="text-align:center;margin-top:24px">
-						<a href="overview.html" class="cta cta--secondary">Voir plus d'informations</a>
-					</div>
-				</div>
-			</section>
-
-			<section class="section alt">
-				<div class="container" style="text-align:center">
-					<a href="contact.html" class="cta">Demander une démo</a>
-					<a href="overview.html" class="cta" style="margin-left:12px">Découvrir toutes les fonctionnalités</a>
 				</div>
 			</section>
 		</main>

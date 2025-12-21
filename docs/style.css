@@ -92,6 +92,61 @@ body{
 .footer-links a{color:var(--muted);text-decoration:none}
 .footer-links a:hover{color:var(--text)}
 
+/* Lightbox Modal */
+.lightbox-modal{
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,.9);
+  z-index:100;
+  align-items:center;
+  justify-content:center;
+  backdrop-filter:blur(4px);
+}
+.lightbox-modal.open{
+  display:flex;
+}
+.lightbox-content{
+  position:relative;
+  max-width:90vw;
+  max-height:90vh;
+  animation:scaleIn .3s ease-out;
+}
+.lightbox-content img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:8px;
+}
+.lightbox-close{
+  position:absolute;
+  top:20px;right:20px;
+  background:rgba(255,255,255,.1);
+  border:none;
+  color:#fff;
+  width:44px;height:44px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:28px;
+  display:flex;align-items:center;justify-content:center;
+  backdrop-filter:blur(10px);
+  transition:all .2s;
+}
+.lightbox-close:hover{
+  background:rgba(255,255,255,.2);
+}
+@keyframes scaleIn{
+  from{transform:scale(.8);opacity:0}
+  to{transform:scale(1);opacity:1}
+}
+.clickable-image{
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.clickable-image:hover{
+  opacity:.8;
+}
+
 /* Responsive */
 @media (max-width: 980px){
   .hero-inner{grid-template-columns: 1fr}

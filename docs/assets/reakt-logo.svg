@@ -1,0 +1,22 @@
+<svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+  <!-- Colored circle with gradient -->
+  <defs>
+    <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#00FFCC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00d1a9;stop-opacity:1" />
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Colored circle -->
+  <circle cx="128" cy="128" r="110" fill="url(#circleGradient)" filter="url(#glow)" opacity="0.95"/>
+  
+  <!-- ReaKt text inside the circle -->
+  <text x="128" y="145" font-family="Inter, -apple-system, system-ui, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#0b1020">ReaKt</text>
+</svg>
