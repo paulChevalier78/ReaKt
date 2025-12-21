@@ -164,3 +164,13 @@ body{
   .steps{grid-template-columns: 1fr}
   .cards{grid-template-columns: 1fr}
 }
+
+.brand-logo {
+	height: 56px;   /* 🔥 AUGMENTE ICI */
+	width: auto;
+}
+
+.brand-text {
+	font-size: 1.6rem; /* texte aligné avec le logo */
+	font-weight: 700;
+}
