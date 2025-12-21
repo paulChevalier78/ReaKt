@@ -74,7 +74,7 @@ window.reakt = (function(){
     return false;
   }
 
-  api.initLightbox = function(){
+  function initLightbox(){
     const modal = qs('#lightbox-modal');
     const closeBtn = qs('.lightbox-close');
     if(!modal) return;
