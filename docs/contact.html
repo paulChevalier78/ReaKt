@@ -49,22 +49,26 @@
 							<li>Pilot sur un bioréacteur en 4–6 semaines</li>
 						</ul>
 					</div>
-					<form class="contact-form" onsubmit="return window.reakt.handleContactSubmit(event)">
-						<label>
-							<span>Nom</span>
-							<input type="text" name="name" required />
-						</label>
-						<label>
-							<span>Email</span>
-							<input type="email" name="email" required />
-						</label>
-						<label>
-							<span>Message</span>
-							<textarea name="message" rows="4" required></textarea>
-						</label>
-						<button class="cta" type="submit">Envoyer</button>
-						<p class="form-hint">Votre message sera envoyé à pauloch2610@gmail.com</p>
-					</form>
+					<form class="contact-form" id="contact-form">
+                        <label>
+                            <span>Nom</span>
+                            <input type="text" name="name" required />
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required />
+                        </label>
+                        <label>
+                            <span>Message</span>
+                            <textarea name="message" rows="4" required></textarea>
+                        </label>
+
+                        <button class="cta" type="submit">Envoyer</button>
+
+                        <p class="form-hint">Votre message sera envoyé à pauloch2610@gmail.com</p>
+                        <p id="form-status" style="margin-top:10px;"></p>
+                    </form>
+
 				</div>
 			</section>
 		</main>
