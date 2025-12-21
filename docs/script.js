@@ -1,15 +1,18 @@
 window.reakt = (function(){
   const api = {};
 
+  // Sélecteurs rapides
   function qs(sel, el=document){ return el.querySelector(sel); }
   function qsa(sel, el=document){ return Array.from(el.querySelectorAll(sel)); }
 
+  // Mettre à jour l'année dans le footer
   function initYear(){
     const y = new Date().getFullYear();
     const el = qs('#year');
     if(el) el.textContent = y;
   }
 
+  // Menu mobile
   function initNav(){
     const btn = qs('.nav-toggle');
     const menu = qs('#nav-menu');
@@ -18,13 +21,13 @@ window.reakt = (function(){
       const open = menu.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
     });
-    // close on link click (mobile)
     qsa('#nav-menu a').forEach(a => a.addEventListener('click', () => {
       menu.classList.remove('open');
       btn.setAttribute('aria-expanded', 'false');
     }));
   }
 
+  // Smooth scroll pour les ancres
   function initSmoothScroll(){
     qsa('a[href^="#"]').forEach(a => {
       a.addEventListener('click', (e) => {
@@ -42,6 +45,7 @@ window.reakt = (function(){
     });
   }
 
+  // Envoi du formulaire vers Formspree
   api.handleContactSubmit = function(e){
     e.preventDefault();
     const form = e.target;
@@ -49,31 +53,39 @@ window.reakt = (function(){
     const name = (data.get('name')||'').toString().trim();
     const email = (data.get('email')||'').toString().trim();
     const message = (data.get('message')||'').toString().trim();
+    const statusEl = qs('#form-status');
 
     if(!name || !email || !message){
-      alert('Veuillez remplir tous les champs.');
+      statusEl.textContent = 'Veuillez remplir tous les champs.';
+      statusEl.style.color = 'red';
       return false;
     }
 
-    // Send email via Formspree (reste sur le site, pas de redirection)
     const formspreeUrl = 'https://formspree.io/f/mykgpyed';
-    
+
     fetch(formspreeUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, message })
+      body: JSON.stringify({ name, email, message, _replyto: email })
     })
-    .then(() => {
-      alert('Merci! Votre demande de contact a bien été envoyée à pauloch2610@gmail.com');
-      form.reset();
+    .then(res => {
+      if(res.ok){
+        statusEl.textContent = 'Merci! Votre message a été envoyé.';
+        statusEl.style.color = 'green';
+        form.reset();
+      } else {
+        throw new Error('Erreur serveur');
+      }
     })
     .catch(() => {
-      alert('Une erreur est survenue. Veuillez réessayer.');
+      statusEl.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+      statusEl.style.color = 'red';
     });
 
     return false;
   }
 
+  // Lightbox pour les images
   function initLightbox(){
     const modal = qs('#lightbox-modal');
     const closeBtn = qs('.lightbox-close');
@@ -92,7 +104,6 @@ window.reakt = (function(){
       if(e.target === modal) modal.classList.remove('open');
     });
     
-    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if(e.key === 'Escape' && modal.classList.contains('open')) {
         modal.classList.remove('open');
@@ -100,11 +111,18 @@ window.reakt = (function(){
     });
   }
 
+  // Initialisation globale
   function init(){
     initYear();
     initNav();
     initSmoothScroll();
     initLightbox();
+
+    // Attache le handler Formspree
+    const form = qs('#contact-form');
+    if(form){
+      form.addEventListener('submit', api.handleContactSubmit);
+    }
   }
 
   if(document.readyState === 'loading'){
