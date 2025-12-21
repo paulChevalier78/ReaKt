@@ -42,6 +42,38 @@ window.reakt = (function(){
     });
   }
 
+  api.handleContactSubmit = function(e){
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const name = (data.get('name')||'').toString().trim();
+    const email = (data.get('email')||'').toString().trim();
+    const message = (data.get('message')||'').toString().trim();
+
+    if(!name || !email || !message){
+      alert('Veuillez remplir tous les champs.');
+      return false;
+    }
+
+    // Send email via Formspree (reste sur le site, pas de redirection)
+    const formspreeUrl = 'https://formspree.io/f/mykgpyed';
+    
+    fetch(formspreeUrl, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, message })
+    })
+    .then(() => {
+      alert('Merci! Votre demande de contact a bien été envoyée à pauloch2610@gmail.com');
+      form.reset();
+    })
+    .catch(() => {
+      alert('Une erreur est survenue. Veuillez réessayer.');
+    });
+
+    return false;
+  }
+
   api.initLightbox = function(){
     const modal = qs('#lightbox-modal');
     const closeBtn = qs('.lightbox-close');

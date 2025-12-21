@@ -49,7 +49,7 @@
 							<li>Pilot sur un bioréacteur en 4–6 semaines</li>
 						</ul>
 					</div>
-					<form class="contact-form" action="https://formspree.io/f/mykgpyed" method="POST">
+					<form class="contact-form" onsubmit="return window.reakt.handleContactSubmit(event)">
 						<label>
 							<span>Nom</span>
 							<input type="text" name="name" required />
